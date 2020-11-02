@@ -1,0 +1,44 @@
+body{
+  text-align: center;
+  vertical-align: center;
+}
+#home{
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  padding-top: 13%;
+  font-family: 'Andale Mono', "Courier New", serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+table{
+    display: inline-block;
+}
+
+/* 로그인 버튼 css */
+#login, #signin{
+  background-color: #CCCCFF;
+  border-color: #CCCDFF;
+  border-radius: 3px;
+  font-family: 'Andale Mono', "Courier New", serif;
+  font-weight: bold;
+  color: gray;
+}
+
+#login:hover, #signin:hover{
+  color: black;
+  background-color: #9F81F7;
+  border-color: #9e7efc;
+}
+
+footer{
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  text-align: right;
+  font-family: "Nanum Gothic Coding", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}

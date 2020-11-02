@@ -1,0 +1,423 @@
+body{
+  font-family: "Nanum Gothic Coding", sans-serif;
+  font-weight: bold;
+  margin: 0px;
+}
+
+/* 자리 배치 */
+nav{
+  text-align: center;
+}
+#plans{
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+#plans td[rowspan = "2"]{
+  background-image: url("img/trip.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/* 버튼 */
+#submit, #deleteM, #addbtn, #saveList, #fileSubmit, #search, #logout{
+  background-color: #CCCCFF;
+  border-color: #CCCDFF;
+  border-radius: 3px;
+  font-family: "Nanum Gothic Coding", sans-serif;
+  font-weight: bold;
+  color: gray;
+  margin-bottom: 3px;
+}
+#logout{
+  position: absolute;
+  display: inline-block;
+  top: 40px;
+  left: 25px;
+}
+#search{
+  padding: 1px;
+  margin: 0px;
+}
+#submit, #deleteM{
+  visibility: hidden;
+  margin-bottom: 5px;
+}
+#fileSubmit{
+  padding: 3px 5px;
+}
+#submit:hover, #deleteM:hover, #addbtn:hover,
+#saveList:hover, #fileSubmit:hover, #search:hover, #logout:hover{
+  color: black;
+  background-color: #9F81F7;
+  border-color: #9e7efc;
+}
+
+/* 메뉴바 */
+.menu{
+  margin-top: 18px;
+  margin-bottom: 20px;
+}
+
+.label{
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  letter-spacing: 2px;
+  font-size: 40px;
+  text-align: right;
+  color: gray;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+.label:hover{
+  cursor: pointer;
+}
+#recoBtn{
+  float: right;
+  margin-right: 30px;
+  display: inline-block;
+  margin-bottom: 2px;
+  margin-top: 8px;
+}
+#recoBtn label{
+  vertical-align: top;
+  font-family: "Courier New", serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+  color: gray;
+}
+
+/* 유저이름 */
+#username{
+  text-align: center;
+  background: #CCCCFF;
+  border-radius: 3px;
+  margin-top: 8px;
+}
+
+/* 일정표 */
+#p{
+  vertical-align: top;
+}
+#plan{
+  padding: 3px;
+  border-top: double 3px gray;
+  border-bottom: double 3px gray;
+  margin-right: 17px;
+}
+.day_td, .plan_td, th{
+  border-radius: 0.5em;
+}
+th{
+  background-color: #CCCCFF;
+  font-size: 20px;
+  padding: 5px;
+}
+.plan_td{
+  width: 250px;
+  height: 40px;
+  padding-left: 15px;
+  font-size: 17px;
+  text-decoration: underline;
+  background: #F7F7F8;
+}
+.day_td{
+  width: 100px;
+  text-align: center;
+  background :#E6E6E6;
+  font-size: 17px;
+}
+.day_td:hover{
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+/* 표 제목, 예약내역 제목, 추천 제목 */
+caption, #imgfiles, #reco, #mapday{
+  font-size: 30px;
+  text-align: left;
+  letter-spacing: 2px;
+}
+#imgfiles{
+  display: block;
+  margin-bottom: 7px;
+}
+#mapday{
+  border-bottom: 3px double black;
+  margin-left: 230px;
+}
+
+/* 지도 */
+#m{
+  height:400px;
+  padding:0px;
+  text-align: center;
+}
+#map{
+  width: 510px;
+  height: 400px;
+}
+.mk{
+  letter-spacing: 1px;
+}
+.mk a:link{
+  color: gold;
+}
+.mk a:hover{
+  color: violet;
+}
+
+/* 텍스트 area */
+#write p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#dests{
+  background-color: #CCCCFF;
+  border-radius: 3px;
+  text-align: center;
+  margin-right: 6px;
+  padding: 4px;
+}
+#dest{
+  background-color: #CCCCFF;
+  border-radius: 0.3em;
+  height: 20px;
+}
+#dest:disabled{
+  visibility: hidden;
+}
+.txtarea{
+  margin: 0px;
+  height: 140px;
+  width: 100%;
+  font-family: Consolas, sans-serif;
+  background-color: #CCCCFF;
+  border-radius: 0.7em;
+}
+.txtarea:hover, #dest:hover{
+  border: 1px solid red;
+}
+.txtarea:disabled {
+  background-color: #D4D4D4;
+  font-size: 17px;
+  font-weight: bold;
+  height: 50px;
+}
+
+/* 체크리스트 */
+#done{
+  border-left: 3px dotted gray;
+}
+#myul, #myuld{
+  margin: 0px 40px;
+  padding: 0px;
+}
+#undone{
+  border-top: 50px solid white;
+}
+#myul li, #myuld li{
+  list-style-type: none;
+  margin: 10px;
+}
+#checklist{
+  width: 100%;
+}
+#check{
+  width: 100%;
+}
+#checktr{
+  vertical-align: top;
+  text-align: center;
+}
+
+/* undone list영역 */
+#undone{
+  padding: 0px;
+  text-align: center;
+}
+#myul li, #myuld li{
+  text-align: left;
+  padding: 10px 15px;
+  width:90%;
+  background: #ddd;
+  border-radius: 0.4em;
+}
+#myul li:hover{
+  background-color: #CCCCFF;
+  cursor: pointer;
+}
+
+/* done list영역 */
+#done{
+  width: 50%;
+}
+#myuld li{
+  background: #BB94D3;
+}
+#myuld li:hover{
+  background-color: #FBDA88;
+  cursor: pointer;
+}
+
+/* 파일 업로드 */
+input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+#ftu{
+  display: inline-block;
+  font-size: 14px;
+  padding: 3px;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1.5px solid #ebebeb;
+  border-radius: 5px;
+  background:#E6E6E6;
+  color: #999;
+}
+#ftu:hover{
+  color: black;
+  cursor: pointer;
+  border: 1.5px inset #ebebec;
+}
+.uploadName{
+  display: inline-block;
+  font-size: 14px;
+  padding: 3px;
+  vertical-align: middle;
+  background-color: #f5f5f5;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  font-family: "Nanum Gothic Coding", sans-serif;
+  font-weight: bold;
+}
+
+#recom{
+  /* overflow: auto; */
+  /* overflow-x:hidden; */
+  height: 180px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#recom img{
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 8px;
+  overflow: hidden;
+  border-radius: 0.3em;
+  box-shadow: 3px 3px 4px #BDBDBD;
+}
+#recom img:hover{
+  cursor: pointer;
+}
+
+.scale img{
+  border-radius: 0.5em;
+  box-shadow: 2px 0px 4px #BDBDBD;
+}
+.scale{
+  display: inline-block;
+  margin: 5px 8px 5px 0px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;   /* 부드러운 모션을 위해 추가*/
+  padding: 0px;
+}
+.scale:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* 예약내역 모아보기 */
+#reserve{
+  margin: 0px 20px;
+}
+
+/* 여행지 추천 탭 */
+.rDests{
+  border-radius: 1em;
+  height: 170px;
+  width: 270px;
+
+  margin-bottom: 6px;
+  margin-right: 10px;
+}
+#recommend{
+  display: inline-block;
+  margin-top: 40px;
+  border-top: 2px dashed gray;
+  margin-left: 20px;
+}
+#rere{
+  margin-bottom: 0px;
+}
+
+
+/* 여행지 추천 on off 스위치 */
+div[class^="ckbx-style-"] input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+}
+
+.ckbx-style-11 {
+  display:inline-block;
+  font-size: 24px;
+}
+
+.ckbx-style-11 input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+}
+
+.ckbx-style-11 label {
+  width: 2em;
+  height: 1em;
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+
+.ckbx-style-11 label:before {
+  content: '';
+  position: absolute;
+  width: 2em;
+  height: .5em;
+  left: 0.1em;
+  top: .25em;
+  transition: background 0.1s 0.1s ease;
+  background: #585858;
+  border-radius: 50px;
+}
+
+.ckbx-style-11 label:after {
+  content: '';
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  left: 0;
+  transition: all 0.2s ease;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  background: gray;
+  border-radius: 100%;
+  z-index: 2;
+  animation: switch-off .4s ease-out forwards;
+}
+
+/* 켜진상태 */
+.ckbx-style-11 input[type=checkbox]:checked + label:before {
+  background: #A0A0FF;
+}
+
+.ckbx-style-11 input[type=checkbox]:checked + label:after {
+  left: 1.1em;
+  background: #CCCCFF;
+  animation: switch-on .4s ease-out forwards;
+}

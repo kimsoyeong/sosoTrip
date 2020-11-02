@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>소소한 여행</title>
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap&subset=korean">
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=91580184d13154db693a82441e5165fc&libraries=services"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="calendar.css">
+  <link rel="stylesheet" href="map.css">
+</head>
+<body>
+  <!-- 목록 -->
+  <nav class = 'menu'>
+    <ul style="padding-left: 0px;">
+      <button id="logout">LOGOUT</button>
+      <li id='planBtn' class="label">PLAN</li>
+      <li id='checklistBtn' class="label">CHECKLIST</li>
+      <li id='reserBtn' class="label">RESERVATION</li>
+      <li id='recoBtn'><label>RECOMMEND</label>
+        <div class="ckbx-style-11" id="ckbox">
+          <input type="checkbox" id="ckbx-style-11-1" value="0" name="ckbx-style-11">
+          <label for="ckbx-style-11-1"></label>
+        </div>
+      </li>
+      <li id="username">
+        <!-- USERNAME 출력 -->
+      </li>
+    </ul>
+  </nav>
+
+  <div id="plans">
+    <table id="planning">
+      <tr id="p">
+        <td rowspan="2">
+          <table id="plan">
+            <caption>YOUR PLAN
+              <input type="submit" id="submit" name="submit" value="save" onclick="save()"/>
+              <input type="button" id="deleteM" value="delete" onclick="deleteMarkers()">
+            </caption>
+            <tr>
+              <th>DAY</th>
+              <th>TRIP</th>
+            </tr>
+            <!-- 표 내부에 일정 간략 출력 -->
+          </table>
+        </td>
+        <td id="m">
+          <!-- 지도를 표시할 div 입니다 -->
+          <div class="map_wrap">
+            <div id="map"></div>
+            <div id="menu_wrap" class="bg_white" style="visibility:hidden">
+              <div class="option">
+                <div>
+                  <form onsubmit="searchPlaces(); return false;">키워드 : <input type="text" value="" id="keyword" size="10">
+                    <button id="search" type="submit">검색</button>
+                  </form>
+                </div>
+              </div>
+              <hr>
+              <ul id="placesList"></ul>
+              <div id="pagination"></div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td id="write">
+          <p><span id="dests">장소</span><input type="text" id="dest" placeholder="장소를 입력하세요." disabled><span id="mapday"></span></p>
+          <textarea id="txtarea" class="txtarea" placeholder="Input your Plans..." disabled>
+
+          Day를 클릭하면, 상세 일정이 보입니다.
+          </textarea>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 체크리스트 -->
+  <div id="checklist" style="display: none;">
+    <table id="check">
+      <tr id="checktr">
+        <td id='left1'>
+          <h1>CHECKLIST</h1>
+          <input id="todo" type = "text" size=50>
+          <input type="button" id="addbtn" value="add">
+        </td>
+        <td rowspan=2 id="done">
+          <h3>DONE</h3>
+          <ul id="myuld" class="result">  </ul>
+        </td>
+      </tr>
+      <tr>
+        <td id="undone">
+          <h3>UNDONE</h3>
+          <ul id="myul" class="result">  </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="reserve" style="display: none;">
+    <span id="imgfiles">RESERVATION</span>
+    <!-- 사진 파일을 읽어서 표시 -->
+    <form id="myForm" name="myForm" method="post">
+      <label id="ftu" for="fileToUpload">파일선택</label>
+      <input type="file" id="fileToUpload" name="fileToUpload">
+      <input class="uploadName" value="파일 선택">
+      <input id="fileSubmit" type="button" value="upload">
+    </form>
+    <div id="forImg"></div>
+  </div>
+
+
+  <!-- 달력 -->
+  <div id="calendar"></div>
+
+  <div id="recommend" style="display: none;">
+    <p id="rere"><span id="reco">RECOMMEND</span></p>
+    <div id="recom">
+      <a href="https://univ20.com/59120" target="_blank" class="rr scale"><img src="./img/R1.JPG" alt="R1" class = "rDests"></a>
+      <a href="https://www.travelgear.co.kr/board/?db=gallery_1&no=1664&mari_mode=view@view" target="_blank" class="rr scale"><img src="./img/R2.JPG" alt="R2" class = "rDests"/></a>
+      <a href="https://post.naver.com/viewer/postView.nhn?memberNo=938657&volumeNo=6882096&vType=VERTICAL" target="_blank" class="rr scale"><img src="./img/R3.JPG" alt="R3" class = "rDests"/></a>
+      <a href="http://www.naeilmohaji.co.kr/news/articleView.html?idxno=658" target="_blank" class="rr scale"><img src="./img/R4.JPG" alt="R4" class = "rDests"/></a>
+      <a href="https://post.naver.com/viewer/postView.nhn?volumeNo=26480822&memberNo=28414372&searchKeyword=%EC%88%9C%EC%B2%9C&searchRank=22" target="_blank" class="rr scale"><img src="./img/R5.JPG" alt="R5" class = "rDests"/></a>
+    </div>
+  </div>
+
+  <script src="map.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
