@@ -34,10 +34,9 @@ This site makes it easy and convenient for users to <i>create, update, and save 
 
 <br/>
 
-## Team Members
+## Author
 - Term project for 'Web Programming' (CNU: Chungnam National University)
 
-| Soyeong Kim |
-|:---:|
-| [**@kimsoyeong**](https://github.com/kimsoyeong) |
+<br/>
 
+| Soyeong Kim | [**@kimsoyeong**](https://github.com/kimsoyeong) |
